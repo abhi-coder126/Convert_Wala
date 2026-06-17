@@ -1,0 +1,652 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+/* ======================================================
+   Convert Wala Global Animation + Hover Effects
+   Paste this at bottom of src/index.css
+====================================================== */
+
+:root {
+  --ath-primary: #2563eb;
+  --ath-sky: #0ea5e9;
+  --ath-dark: #020617;
+  --ath-text: #0f172a;
+  --ath-muted: #64748b;
+  --ath-border: #e5e7eb;
+  --ath-page-bg: #f8fafc;
+  --ath-surface: #ffffff;
+  --ath-loader-bg: rgba(248, 250, 252, 0.92);
+  --ath-loader-card: rgba(255, 255, 255, 0.92);
+  --ath-shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+  --ath-shadow-hover: 0 28px 75px rgba(37, 99, 235, 0.16);
+  --ath-transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="dark"] {
+  --ath-primary: #38bdf8;
+  --ath-sky: #7dd3fc;
+  --ath-dark: #020617;
+  --ath-text: #f8fafc;
+  --ath-muted: #cbd5e1;
+  --ath-border: rgba(255, 255, 255, 0.12);
+  --ath-page-bg: #020617;
+  --ath-surface: #0f172a;
+  --ath-loader-bg: rgba(2, 6, 23, 0.92);
+  --ath-loader-card: rgba(15, 23, 42, 0.92);
+}
+
+/* Base smoothness */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  background: var(--ath-page-bg);
+  color: var(--ath-text);
+}
+
+.ath-app-shell {
+  min-height: 100vh;
+  background: var(--ath-page-bg);
+  color: var(--ath-text);
+}
+
+.ath-page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(37, 99, 235, 0.12), transparent 28%),
+    var(--ath-loader-bg);
+  color: var(--ath-text);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+  backdrop-filter: blur(10px);
+}
+
+.ath-page-loader.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ath-loader-card {
+  width: 168px;
+  min-height: 154px;
+  border: 1px solid var(--ath-border);
+  border-radius: 26px;
+  background: var(--ath-loader-card);
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.16);
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  padding: 24px 22px 20px;
+  transform: translateY(8px) scale(0.98);
+  transition: transform 0.24s ease;
+}
+
+.ath-page-loader.show .ath-loader-card {
+  transform: translateY(0) scale(1);
+}
+
+.ath-loader-mark {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 24px;
+  background:
+    linear-gradient(var(--ath-loader-card), var(--ath-loader-card)) padding-box,
+    conic-gradient(from 0deg, var(--ath-primary), var(--ath-sky), #7c3aed, var(--ath-primary)) border-box;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ath-primary);
+  animation: athLoaderFloat 1.7s ease-in-out infinite;
+}
+
+.ath-loader-mark::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  border-top-color: var(--ath-primary);
+  border-right-color: rgba(14, 165, 233, 0.55);
+  animation: athLoaderSpin 0.95s linear infinite;
+}
+
+.ath-loader-mark span {
+  position: relative;
+  z-index: 1;
+  font-size: 1.14rem;
+  font-weight: 720;
+  letter-spacing: 0;
+}
+
+.ath-loader-progress {
+  position: relative;
+  width: 104px;
+  height: 4px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(100, 116, 139, 0.18);
+}
+
+.ath-loader-progress::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 42%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--ath-primary), var(--ath-sky));
+  animation: athLoaderSlide 0.95s ease-in-out infinite;
+}
+
+@keyframes athLoaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes athLoaderFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes athLoaderSlide {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  50% {
+    transform: translateX(72%);
+  }
+
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+/* Smooth transition for common UI elements */
+a,
+button,
+select,
+input,
+textarea,
+.tool-card,
+.rb-feature-card,
+.rb-hero-card,
+.art-home-mini-card,
+.rb-home-cta,
+.summary-card,
+.stg-card,
+.rtg-card,
+.ac-card,
+.emi-card,
+.gst-card,
+.cc-card,
+.sal-card,
+.chat-tool-card,
+.ath-chat-tool-card {
+  transition:
+    transform var(--ath-transition),
+    box-shadow var(--ath-transition),
+    border-color var(--ath-transition),
+    background var(--ath-transition),
+    color var(--ath-transition),
+    opacity var(--ath-transition);
+}
+
+/* Professional hover lift for all major cards */
+.tool-card:hover,
+.rb-feature-card:hover,
+.art-home-mini-card:hover,
+.rb-hero-card:hover,
+.summary-card:hover,
+.stg-card:hover,
+.rtg-card:hover,
+.ac-card:hover,
+.emi-card:hover,
+.gst-card:hover,
+.cc-card:hover,
+.sal-card:hover,
+.chat-tool-card:hover,
+.ath-chat-tool-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ath-shadow-hover);
+  border-color: rgba(37, 99, 235, 0.32);
+}
+
+/* Buttons hover */
+.rb-primary-btn:hover,
+.rb-secondary-btn:hover,
+.tools-search-btn:hover,
+.ac-primary:hover,
+.ac-dark:hover,
+.ac-light:hover,
+.emi-primary:hover,
+.emi-dark:hover,
+.emi-light:hover,
+.gst-primary:hover,
+.gst-dark:hover,
+.gst-light:hover,
+.cc-primary:hover,
+.cc-dark:hover,
+.cc-light:hover,
+.sal-primary:hover,
+.sal-dark:hover,
+.sal-light:hover,
+.ath-theme-btn:hover,
+.ath-menu-btn:hover,
+.nav-theme-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(37, 99, 235, 0.18);
+}
+
+/* Icon animation inside cards */
+.tool-card:hover svg,
+.rb-feature-card:hover svg,
+.art-home-mini-card:hover svg,
+.ath-chat-tool-card:hover svg {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.tool-card svg,
+.rb-feature-card svg,
+.art-home-mini-card svg,
+.ath-chat-tool-card svg {
+  transition: transform var(--ath-transition), color var(--ath-transition);
+}
+
+/* Navbar link underline animation */
+.ath-nav-links a,
+.rb-nav-links a {
+  position: relative;
+}
+
+.ath-nav-links a::after,
+.rb-nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width var(--ath-transition);
+}
+
+.ath-nav-links a:hover::after,
+.ath-nav-links a.active::after,
+.rb-nav-links a:hover::after,
+.rb-nav-links a.active::after {
+  width: 70%;
+}
+
+/* Input focus animation */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Subtle shine on primary buttons */
+.rb-primary-btn,
+.tools-search-btn,
+.ac-primary,
+.emi-primary,
+.gst-primary,
+.cc-primary,
+.sal-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.rb-primary-btn::before,
+.tools-search-btn::before,
+.ac-primary::before,
+.emi-primary::before,
+.gst-primary::before,
+.cc-primary::before,
+.sal-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.65s ease;
+}
+
+.rb-primary-btn:hover::before,
+.tools-search-btn:hover::before,
+.ac-primary:hover::before,
+.emi-primary:hover::before,
+.gst-primary:hover::before,
+.cc-primary:hover::before,
+.sal-primary:hover::before {
+  left: 130%;
+}
+
+/* Page fade animation */
+main {
+  animation: athPageFade 0.45s ease both;
+}
+
+@keyframes athPageFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero content reveal */
+.rb-hero-content,
+.tools-hero,
+.rb-section-head,
+.rb-home-cta {
+  animation: athHeroReveal 0.6s ease both;
+}
+
+@keyframes athHeroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card stagger feel without JS */
+.rb-feature-card:nth-child(1),
+.tool-card:nth-child(1),
+.art-home-mini-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.rb-feature-card:nth-child(2),
+.tool-card:nth-child(2),
+.art-home-mini-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.rb-feature-card:nth-child(3),
+.tool-card:nth-child(3),
+.art-home-mini-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.rb-feature-card:nth-child(4),
+.tool-card:nth-child(4),
+.art-home-mini-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.rb-feature-card,
+.tool-card,
+.art-home-mini-card {
+  animation: athCardIn 0.55s ease both;
+}
+
+@keyframes athCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Floating animation for hero card */
+.rb-hero-card {
+  animation: athFloatCard 5.5s ease-in-out infinite;
+}
+
+@keyframes athFloatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Chatbot pulse smooth */
+.ath-chat-toggle,
+.chat-toggle {
+  animation: athChatFloat 3s ease-in-out infinite;
+}
+
+@keyframes athChatFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Dark mode friendly hover */
+.ath-home-page.dark .tool-card:hover,
+.ath-home-page.dark .rb-feature-card:hover,
+.ath-home-page.dark .art-home-mini-card:hover,
+.tools-page.dark .tool-card:hover {
+  box-shadow: 0 28px 75px rgba(14, 165, 233, 0.16);
+  border-color: rgba(56, 189, 248, 0.32);
+}
+
+/* Stop animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile hover ko soft rakho */
+@media (max-width: 768px) {
+  .tool-card:hover,
+  .rb-feature-card:hover,
+  .art-home-mini-card:hover,
+  .rb-hero-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .rb-hero-card {
+    animation: none;
+  }
+
+  .ath-nav-links a::after,
+  .rb-nav-links a::after {
+    display: none;
+  }
+}/* ================================
+   Convert Wala Scroll To Top Button
+================================ */
+
+body.dark-mode .ath-scroll-top,
+[data-theme="dark"] .ath-scroll-top {
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  box-shadow: 0 22px 55px rgba(56, 189, 248, 0.22);
+}
+
+@media (max-width: 768px) {
+  .ath-scroll-top {
+    right: 18px;
+    bottom: 86px;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ath-scroll-top {
+    right: 14px;
+    bottom: 82px;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+}
+
+/* Convert Wala typography polish */
+:where(.ath-app-shell, main, .ath-navbar, .ath-footer) {
+  font-weight: 400;
+}
+
+:where(
+  main h1,
+  .tools-hero h1,
+  .rb-hero h1,
+  .rb-section-head h2,
+  .rb-home-cta h2,
+  [class*="-page"] h1
+) {
+  font-weight: 720 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.12 !important;
+  overflow: visible !important;
+  padding-block: 0.04em;
+}
+
+:where(
+  main h2,
+  .ath-footer-logo,
+  .ath-logo-text,
+  [class*="-page"] h2
+) {
+  font-weight: 680 !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.18 !important;
+  overflow: visible !important;
+}
+
+:where(
+  main h3,
+  .tool-card h3,
+  .art-home-mini-card h3,
+  .rb-feature-card h3,
+  .ath-footer-col h3,
+  [class*="-page"] h3
+) {
+  font-weight: 620 !important;
+  letter-spacing: 0 !important;
+}
+
+:where(
+  .rb-eyebrow,
+  [class*="eyebrow"],
+  .ath-page-loader p,
+  .ath-footer-badges span
+) {
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.45 !important;
+  overflow: visible !important;
+}
+
+:where(
+  section[class*="hero"],
+  div[class*="hero"],
+  .tools-hero,
+  .rb-hero
+) {
+  overflow: visible !important;
+}
+
+:where(
+  a,
+  button,
+  select,
+  label,
+  .ath-nav-links > a,
+  .ath-tools-toggle,
+  .ath-tools-menu a,
+  .ath-lang-box,
+  .ath-theme-btn,
+  .ath-footer-col a,
+  .ath-footer-bottom a,
+  .rb-primary-btn,
+  .rb-secondary-btn,
+  [class*="btn"],
+  [class*="button"]
+) {
+  font-weight: 600 !important;
+}
+
+:where(
+  p,
+  li,
+  input,
+  textarea,
+  .rb-hero-text,
+  .rb-feature-card p,
+  .ath-footer-brand p,
+  .ath-footer-trust p,
+  [class*="-page"] p
+) {
+  font-weight: 400 !important;
+}
+
+:where(strong, b) {
+  font-weight: 650;
+}

@@ -1,0 +1,425 @@
+.case-page {
+  min-height: 100vh;
+  padding: 110px 6% 70px;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(37, 99, 235, 0.18), transparent 32%),
+    radial-gradient(circle at 90% 4%, rgba(124, 58, 237, 0.18), transparent 32%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  color: #111827;
+}
+
+.case-page.dark {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(59, 130, 246, 0.16), transparent 32%),
+    radial-gradient(circle at 90% 4%, rgba(168, 85, 247, 0.14), transparent 32%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: #f8fafc;
+}
+
+.case-hero {
+  max-width: 980px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.case-badge {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.12);
+}
+
+.case-page.dark .case-badge {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: #334155;
+  color: #93c5fd;
+}
+
+.case-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.case-hero h1 {
+  font-size: clamp(2.4rem, 7vw, 5.2rem);
+  line-height: 0.98;
+  margin: 0 0 18px;
+  letter-spacing: -0.065em;
+  background: linear-gradient(135deg, #0f172a 15%, #2563eb 55%, #7c3aed 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.case-page.dark .case-hero h1 {
+  background: linear-gradient(135deg, #ffffff, #93c5fd, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.case-hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.case-page.dark .case-hero p {
+  color: #cbd5e1;
+}
+
+.case-info {
+  max-width: 1120px;
+  margin: 0 auto 28px;
+  padding: 18px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: center;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.case-page.dark .case-info {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.case-info > svg {
+  width: 52px;
+  height: 52px;
+  padding: 13px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+}
+
+.case-info h3 {
+  margin: 0 0 5px;
+  font-size: 19px;
+  letter-spacing: -0.03em;
+}
+
+.case-info p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.case-page.dark .case-info p {
+  color: #94a3b8;
+}
+
+.case-shell {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  box-shadow: 0 28px 90px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.case-page.dark .case-shell {
+  background: rgba(15, 23, 42, 0.76);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.case-editor-card,
+.case-output-card {
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08);
+}
+
+.case-page.dark .case-editor-card,
+.case-page.dark .case-output-card {
+  background: #020617;
+  border-color: #334155;
+}
+
+.case-card-head {
+  min-height: 66px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.case-page.dark .case-card-head {
+  background: #020617;
+  border-color: #334155;
+}
+
+.case-card-head h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+}
+
+.case-card-head span {
+  flex-shrink: 0;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.case-page.dark .case-card-head span {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.case-editor-card textarea,
+.case-output-card textarea {
+  width: 100%;
+  min-height: 390px;
+  resize: vertical;
+  border: 0;
+  outline: none;
+  padding: 24px;
+  font-size: 16px;
+  line-height: 1.85;
+  background:
+    linear-gradient(rgba(248, 250, 252, 0.96), rgba(248, 250, 252, 0.96)),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 32px,
+      rgba(148, 163, 184, 0.14) 33px
+    );
+  color: #0f172a;
+}
+
+.case-editor-card textarea::placeholder,
+.case-output-card textarea::placeholder {
+  color: #94a3b8;
+}
+
+.case-page.dark .case-editor-card textarea,
+.case-page.dark .case-output-card textarea {
+  background:
+    linear-gradient(rgba(2, 6, 23, 0.96), rgba(2, 6, 23, 0.96)),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 32px,
+      rgba(148, 163, 184, 0.1) 33px
+    );
+  color: #f8fafc;
+}
+
+.case-options {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #ffffff;
+}
+
+.case-page.dark .case-options {
+  background: #020617;
+  border-color: #334155;
+}
+
+.case-options button {
+  min-height: 46px;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  background: #f8fafc;
+  color: #1e40af;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 12px;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.case-options button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.case-options button:hover {
+  transform: translateY(-1px);
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.case-options button.active {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.24);
+}
+
+.case-page.dark .case-options button {
+  background: #0f172a;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+.case-page.dark .case-options button:hover {
+  background: rgba(59, 130, 246, 0.12);
+  color: #93c5fd;
+}
+
+.case-actions {
+  padding: 18px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.case-page.dark .case-actions {
+  background: #020617;
+  border-color: #334155;
+}
+
+.case-actions button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 950;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 20px;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.2);
+  transition: 0.2s ease;
+}
+
+.case-actions button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px rgba(37, 99, 235, 0.28);
+}
+
+.case-actions button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.case-actions .danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.case-toast {
+  position: fixed;
+  top: 92px;
+  right: 22px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px 17px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  font-weight: 800;
+}
+
+.case-toast.success {
+  color: #16a34a;
+}
+
+.case-toast.error {
+  color: #dc2626;
+}
+
+@media (max-width: 1200px) {
+  .case-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .case-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .case-output-card {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-page {
+    padding: 94px 16px 46px;
+  }
+
+  .case-info {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .case-shell {
+    padding: 16px;
+    border-radius: 26px;
+  }
+
+  .case-editor-card textarea,
+  .case-output-card textarea {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 560px) {
+  .case-hero h1 {
+    font-size: 2.55rem;
+  }
+
+  .case-options {
+    grid-template-columns: 1fr;
+  }
+
+  .case-actions {
+    flex-direction: column;
+  }
+
+  .case-actions button {
+    width: 100%;
+  }
+
+  .case-card-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

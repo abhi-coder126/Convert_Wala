@@ -1,0 +1,456 @@
+.pdf-reorder-page {
+  min-height: 100vh;
+  padding: 110px 6% 60px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 34%),
+    #f6f9fe;
+  color: #111827;
+}
+
+.pdf-reorder-page.dark {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 34%),
+    #070b14;
+  color: #f8fafc;
+}
+
+.pdf-reorder-hero {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto 28px;
+}
+
+.pdf-reorder-badge {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.pdf-reorder-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pdf-reorder-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.05em;
+}
+
+.pdf-reorder-hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-hero p {
+  color: #94a3b8;
+}
+
+.pdf-reorder-info {
+  max-width: 980px;
+  margin: 0 auto 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.pdf-reorder-page.dark .pdf-reorder-info {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.pdf-reorder-info svg {
+  min-width: 38px;
+  color: #2563eb;
+}
+
+.pdf-reorder-info h3 {
+  margin-bottom: 6px;
+}
+
+.pdf-reorder-info p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-info p {
+  color: #94a3b8;
+}
+
+.pdf-reorder-shell {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 30px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 0.82fr 1.35fr;
+  gap: 24px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+}
+
+.pdf-reorder-page.dark .pdf-reorder-shell {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.pdf-reorder-left {
+  display: grid;
+  gap: 18px;
+}
+
+.pdf-reorder-upload {
+  border: 2px dashed rgba(37, 99, 235, 0.42);
+  border-radius: 24px;
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(239, 246, 255, 0.95), rgba(245, 243, 255, 0.95));
+}
+
+.pdf-reorder-page.dark .pdf-reorder-upload {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.pdf-reorder-upload input {
+  display: none;
+}
+
+.pdf-reorder-upload span {
+  width: 70px;
+  height: 70px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.pdf-reorder-upload svg {
+  width: 34px;
+  height: 34px;
+}
+
+.pdf-reorder-upload strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.pdf-reorder-upload small {
+  color: #64748b;
+}
+
+.pdf-reorder-actions,
+.pdf-reorder-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-actions,
+.pdf-reorder-page.dark .pdf-reorder-card {
+  background: #020617;
+  border-color: #334155;
+}
+
+.pdf-reorder-actions {
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.pdf-reorder-control label {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 9px;
+}
+
+.pdf-reorder-control input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  padding: 0 14px;
+  outline: none;
+  font-weight: 800;
+}
+
+.pdf-reorder-control input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.pdf-reorder-page.dark .pdf-reorder-control input {
+  background: #020617;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.pdf-reorder-control small {
+  display: block;
+  margin-top: 7px;
+  color: #64748b;
+}
+
+.pdf-reorder-actions button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.pdf-reorder-actions button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.pdf-reorder-actions .danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.pdf-reorder-card-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-card-head {
+  border-color: #334155;
+}
+
+.pdf-reorder-card-head h3 {
+  margin: 0;
+}
+
+.pdf-reorder-card-head span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.pdf-reorder-file {
+  margin: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-file {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.pdf-reorder-file-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: grid;
+  place-items: center;
+}
+
+.pdf-reorder-file strong {
+  display: block;
+  word-break: break-all;
+  margin-bottom: 6px;
+}
+
+.pdf-reorder-file small {
+  display: block;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.pdf-reorder-list {
+  margin: 0 18px 18px;
+  display: grid;
+  gap: 10px;
+  max-height: 460px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.pdf-reorder-item {
+  padding: 12px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-item {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.pdf-reorder-page-number {
+  font-weight: 900;
+  color: #111827;
+}
+
+.pdf-reorder-page.dark .pdf-reorder-page-number {
+  color: #f8fafc;
+}
+
+.pdf-reorder-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.pdf-reorder-item-actions button {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 12px;
+  background: #dbeafe;
+  color: #2563eb;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.pdf-reorder-item-actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pdf-reorder-item-actions svg {
+  width: 17px;
+  height: 17px;
+}
+
+.pdf-reorder-empty {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #64748b;
+  padding: 24px;
+}
+
+.pdf-reorder-empty svg {
+  width: 58px;
+  height: 58px;
+  color: #2563eb;
+  margin-bottom: 14px;
+}
+
+.pdf-reorder-result {
+  margin: 0 18px 18px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #dcfce7;
+  color: #15803d;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.pdf-reorder-result span {
+  margin-left: auto;
+}
+
+.pdf-reorder-toast {
+  position: fixed;
+  top: 92px;
+  right: 22px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px 17px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  font-weight: 800;
+}
+
+.pdf-reorder-toast.success {
+  color: #16a34a;
+}
+
+.pdf-reorder-toast.error {
+  color: #dc2626;
+}
+
+@media (max-width: 992px) {
+  .pdf-reorder-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .pdf-reorder-page {
+    padding: 92px 16px 42px;
+  }
+
+  .pdf-reorder-info {
+    flex-direction: column;
+  }
+
+  .pdf-reorder-file {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pdf-reorder-result {
+    flex-wrap: wrap;
+  }
+
+  .pdf-reorder-result span {
+    margin-left: 0;
+  }
+
+  .pdf-reorder-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pdf-reorder-item-actions button {
+    flex: 1;
+    width: 100%;
+  }
+}

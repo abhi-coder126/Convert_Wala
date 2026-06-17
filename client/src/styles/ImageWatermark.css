@@ -1,0 +1,333 @@
+.watermark-page {
+  min-height: 100vh;
+  padding: 110px 6% 60px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 34%),
+    #f6f9fe;
+  color: #111827;
+}
+
+.watermark-page.dark {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 34%),
+    #070b14;
+  color: #f8fafc;
+}
+
+.watermark-hero {
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto 34px;
+}
+
+.watermark-badge {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.watermark-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.watermark-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.05em;
+}
+
+.watermark-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.watermark-page.dark .watermark-hero p {
+  color: #94a3b8;
+}
+
+.watermark-shell {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 30px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 24px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.watermark-page.dark .watermark-shell {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.watermark-left {
+  display: grid;
+  gap: 18px;
+}
+
+.watermark-upload {
+  border: 2px dashed rgba(37, 99, 235, 0.42);
+  border-radius: 24px;
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(239, 246, 255, 0.95), rgba(245, 243, 255, 0.95));
+}
+
+.watermark-page.dark .watermark-upload {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.watermark-upload input {
+  display: none;
+}
+
+.watermark-upload span {
+  width: 70px;
+  height: 70px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  margin-bottom: 14px;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.28);
+}
+
+.watermark-upload svg {
+  width: 34px;
+  height: 34px;
+}
+
+.watermark-upload strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.watermark-upload small {
+  color: #64748b;
+}
+
+.watermark-page.dark .watermark-upload small {
+  color: #94a3b8;
+}
+
+.watermark-controls {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+.watermark-page.dark .watermark-controls {
+  background: #020617;
+  border-color: #334155;
+}
+
+.watermark-control label {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 9px;
+}
+
+.watermark-control input[type="text"],
+.watermark-control select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  padding: 0 14px;
+  outline: none;
+  background: #fff;
+  font-weight: 800;
+}
+
+.watermark-page.dark .watermark-control input[type="text"],
+.watermark-page.dark .watermark-control select {
+  background: #020617;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.watermark-control input[type="range"] {
+  width: 100%;
+}
+
+.watermark-control input[type="color"] {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  padding: 5px;
+  background: #fff;
+}
+
+.watermark-controls button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.18);
+}
+
+.watermark-controls button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.watermark-controls .danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.watermark-preview-card {
+  background: #fff;
+  border-radius: 26px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.watermark-page.dark .watermark-preview-card {
+  background: #020617;
+  border-color: #334155;
+}
+
+.watermark-preview-head {
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watermark-page.dark .watermark-preview-head {
+  border-color: #334155;
+}
+
+.watermark-preview-head h3 {
+  margin: 0;
+}
+
+.watermark-preview-head span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.watermark-preview-box {
+  min-height: 560px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 30px;
+  background:
+    linear-gradient(45deg, rgba(148, 163, 184, 0.12) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(148, 163, 184, 0.12) 25%, transparent 25%),
+    #f8fafc;
+}
+
+.watermark-page.dark .watermark-preview-box {
+  background: #020617;
+}
+
+.watermark-preview-box img {
+  max-width: 92%;
+  max-height: 460px;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.18);
+}
+
+.watermark-empty {
+  text-align: center;
+  color: #64748b;
+}
+
+.watermark-empty svg {
+  width: 58px;
+  height: 58px;
+  color: #2563eb;
+  margin-bottom: 14px;
+}
+
+.watermark-toast {
+  position: fixed;
+  top: 92px;
+  right: 22px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px 17px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  font-weight: 800;
+}
+
+.watermark-toast.success {
+  color: #16a34a;
+}
+
+.watermark-toast.error {
+  color: #dc2626;
+}
+
+@media (max-width: 992px) {
+  .watermark-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .watermark-preview-box {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 560px) {
+  .watermark-page {
+    padding: 92px 16px 42px;
+  }
+
+  .watermark-preview-box {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .watermark-preview-box img {
+    max-width: 94%;
+    max-height: 310px;
+  }
+}

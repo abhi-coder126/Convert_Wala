@@ -1,0 +1,340 @@
+.qr-page {
+  min-height: 100vh;
+  padding: 110px 6% 60px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 34%),
+    #f6f9fe;
+  color: #111827;
+}
+
+.qr-page.dark {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 34%),
+    #070b14;
+  color: #f8fafc;
+}
+
+.qr-hero {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto 28px;
+}
+
+.qr-badge {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.qr-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.qr-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.05em;
+}
+
+.qr-hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.qr-page.dark .qr-hero p {
+  color: #94a3b8;
+}
+
+.qr-info {
+  max-width: 980px;
+  margin: 0 auto 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.qr-page.dark .qr-info {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.qr-info svg {
+  min-width: 38px;
+  color: #2563eb;
+}
+
+.qr-info h3 {
+  margin-bottom: 6px;
+}
+
+.qr-info p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.qr-page.dark .qr-info p {
+  color: #94a3b8;
+}
+
+.qr-shell {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 30px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 24px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.qr-page.dark .qr-shell {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.qr-controls-card,
+.qr-preview-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.qr-page.dark .qr-controls-card,
+.qr-page.dark .qr-preview-card {
+  background: #020617;
+  border-color: #334155;
+}
+
+.qr-controls-card {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.qr-control label {
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 9px;
+}
+
+.qr-control textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  padding: 14px;
+  outline: none;
+  background: #f8fafc;
+  color: #111827;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.qr-page.dark .qr-control textarea {
+  background: #020617;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.qr-control input[type="range"] {
+  width: 100%;
+}
+
+.qr-color-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.qr-control input[type="color"] {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  padding: 5px;
+  background: #fff;
+}
+
+.qr-page.dark .qr-control input[type="color"] {
+  background: #020617;
+  border-color: #334155;
+}
+
+.qr-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.qr-actions button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.qr-actions button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.qr-actions .danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.qr-preview-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qr-page.dark .qr-preview-head {
+  border-color: #334155;
+}
+
+.qr-preview-head h3 {
+  margin: 0;
+}
+
+.qr-preview-head span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.qr-preview-box {
+  min-height: 520px;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  position: relative;
+  background:
+    linear-gradient(45deg, rgba(148, 163, 184, 0.12) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(148, 163, 184, 0.12) 25%, transparent 25%),
+    #f8fafc;
+}
+
+.qr-page.dark .qr-preview-box {
+  background: #020617;
+}
+
+.qr-preview-box canvas {
+  max-width: 420px;
+  width: 100%;
+  height: auto !important;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+  background: #fff;
+}
+
+.qr-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #64748b;
+  padding: 24px;
+  background: rgba(248, 250, 252, 0.9);
+}
+
+.qr-page.dark .qr-empty {
+  background: rgba(2, 6, 23, 0.9);
+  color: #94a3b8;
+}
+
+.qr-empty svg {
+  width: 58px;
+  height: 58px;
+  color: #2563eb;
+  margin-bottom: 14px;
+}
+
+.qr-toast {
+  position: fixed;
+  top: 92px;
+  right: 22px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px 17px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  font-weight: 800;
+}
+
+.qr-toast.success {
+  color: #16a34a;
+}
+
+.qr-toast.error {
+  color: #dc2626;
+}
+
+@media (max-width: 992px) {
+  .qr-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-preview-box {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 560px) {
+  .qr-page {
+    padding: 92px 16px 42px;
+  }
+
+  .qr-info {
+    flex-direction: column;
+  }
+
+  .qr-actions,
+  .qr-color-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-preview-box {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .qr-preview-box canvas {
+    max-width: 280px;
+  }
+}

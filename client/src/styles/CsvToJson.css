@@ -1,0 +1,413 @@
+.csvjson-page {
+  min-height: 100vh;
+  padding: 110px 6% 70px;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(37, 99, 235, 0.2), transparent 34%),
+    radial-gradient(circle at 92% 0%, rgba(124, 58, 237, 0.18), transparent 34%),
+    linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  color: #111827;
+}
+
+.csvjson-page.dark {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(59, 130, 246, 0.18), transparent 34%),
+    radial-gradient(circle at 92% 0%, rgba(168, 85, 247, 0.16), transparent 34%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: #f8fafc;
+}
+
+.csvjson-hero {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.csvjson-badge {
+  width: fit-content;
+  margin: 0 auto 18px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 950;
+  font-size: 14px;
+}
+
+.csvjson-page.dark .csvjson-badge {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: #334155;
+  color: #93c5fd;
+}
+
+.csvjson-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.csvjson-hero h1 {
+  font-size: clamp(2.5rem, 7vw, 5.35rem);
+  line-height: 0.98;
+  margin: 0 0 18px;
+  letter-spacing: -0.065em;
+  background: linear-gradient(135deg, #0f172a 15%, #2563eb 55%, #7c3aed 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.csvjson-page.dark .csvjson-hero h1 {
+  background: linear-gradient(135deg, #ffffff, #93c5fd, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.csvjson-hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.csvjson-page.dark .csvjson-hero p {
+  color: #cbd5e1;
+}
+
+.csvjson-info,
+.csvjson-options {
+  max-width: 1120px;
+  margin: 0 auto 22px;
+  padding: 18px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.csvjson-info {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.csvjson-page.dark .csvjson-info,
+.csvjson-page.dark .csvjson-options {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.csvjson-info > svg {
+  width: 52px;
+  height: 52px;
+  padding: 13px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+}
+
+.csvjson-info h3 {
+  margin: 0 0 5px;
+  font-size: 19px;
+}
+
+.csvjson-info p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.csvjson-page.dark .csvjson-info p {
+  color: #94a3b8;
+}
+
+.csvjson-stats {
+  max-width: 1120px;
+  margin: 0 auto 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.csvjson-stats div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+.csvjson-page.dark .csvjson-stats div {
+  background: rgba(15, 23, 42, 0.88);
+  border-color: #334155;
+}
+
+.csvjson-stats span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 950;
+  margin-bottom: 8px;
+}
+
+.csvjson-page.dark .csvjson-stats span {
+  color: #94a3b8;
+}
+
+.csvjson-stats strong {
+  display: block;
+  font-size: 28px;
+  color: #0f172a;
+}
+
+.csvjson-page.dark .csvjson-stats strong {
+  color: #f8fafc;
+}
+
+.csvjson-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: end;
+}
+
+.csvjson-control label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 950;
+  font-size: 13px;
+}
+
+.csvjson-control select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  padding: 0 14px;
+  background: #fff;
+  color: #0f172a;
+  font-weight: 900;
+  outline: none;
+}
+
+.csvjson-page.dark .csvjson-control select {
+  background: #020617;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.csvjson-shell {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.92);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  box-shadow: 0 28px 90px rgba(15, 23, 42, 0.12);
+}
+
+.csvjson-page.dark .csvjson-shell {
+  background: rgba(15, 23, 42, 0.76);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.csvjson-card {
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  overflow: hidden;
+}
+
+.csvjson-page.dark .csvjson-card {
+  background: #020617;
+  border-color: #334155;
+}
+
+.csvjson-card-head {
+  min-height: 66px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.csvjson-page.dark .csvjson-card-head {
+  border-color: #334155;
+}
+
+.csvjson-card-head h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.csvjson-card-head span {
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.csvjson-page.dark .csvjson-card-head span {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.csvjson-card textarea {
+  width: 100%;
+  min-height: 390px;
+  resize: vertical;
+  border: 0;
+  outline: none;
+  padding: 24px;
+  font-size: 15px;
+  line-height: 1.75;
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: "Consolas", "Monaco", monospace;
+}
+
+.csvjson-page.dark .csvjson-card textarea {
+  background: #020617;
+  color: #f8fafc;
+}
+
+.csvjson-card textarea::placeholder {
+  color: #94a3b8;
+}
+
+.csvjson-actions {
+  padding: 18px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.csvjson-page.dark .csvjson-actions {
+  background: #020617;
+  border-color: #334155;
+}
+
+.csvjson-actions button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 950;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 20px;
+}
+
+.csvjson-actions button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.csvjson-actions button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.csvjson-actions .danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.csvjson-toast {
+  position: fixed;
+  top: 92px;
+  right: 22px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px 17px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  font-weight: 800;
+}
+
+.csvjson-page.dark .csvjson-toast {
+  background: #0f172a;
+  border: 1px solid #334155;
+}
+
+.csvjson-toast svg {
+  width: 20px;
+  height: 20px;
+}
+
+.csvjson-toast.success {
+  color: #16a34a;
+}
+
+.csvjson-toast.error {
+  color: #dc2626;
+}
+
+@media (max-width: 1100px) {
+  .csvjson-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .csvjson-page {
+    padding: 92px 16px 46px;
+  }
+
+  .csvjson-info {
+    grid-template-columns: 1fr;
+  }
+
+  .csvjson-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .csvjson-shell {
+    padding: 16px;
+    border-radius: 26px;
+  }
+
+  .csvjson-card {
+    border-radius: 22px;
+  }
+
+  .csvjson-card textarea {
+    min-height: 320px;
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  .csvjson-actions {
+    flex-direction: column;
+  }
+
+  .csvjson-actions button {
+    width: 100%;
+  }
+
+  .csvjson-toast {
+    top: 82px;
+    left: 16px;
+    right: 16px;
+  }
+}

@@ -1,0 +1,163 @@
+.ath-chat-window {
+  width: min(410px, calc(100vw - 24px));
+}
+
+.ath-chat-body {
+  min-height: 0;
+}
+
+.ath-chat-quick {
+  scrollbar-width: none;
+}
+
+.ath-chat-quick::-webkit-scrollbar {
+  display: none;
+}
+
+.ath-chat-input-area {
+  width: 100%;
+}
+
+.ath-chat-brand {
+  min-width: 0;
+  flex: 1;
+}
+
+.ath-chat-brand h3,
+.ath-chat-brand p {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+  .ath-chat-window {
+    right: 10px;
+    left: 10px;
+    bottom: 82px;
+    width: auto;
+    height: min(560px, calc(100dvh - 96px));
+    max-height: calc(100dvh - 96px);
+    border-radius: 22px;
+  }
+
+  .ath-chat-header {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .ath-chat-brand-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+  }
+
+  .ath-chat-brand h3 {
+    font-size: 0.92rem;
+  }
+
+  .ath-chat-brand p {
+    font-size: 0.72rem;
+  }
+
+  .ath-header-actions {
+    gap: 6px;
+  }
+
+  .ath-lang-mini {
+    padding: 3px;
+  }
+
+  .ath-lang-mini button {
+    padding: 6px 7px;
+    font-size: 0.68rem;
+  }
+
+  .ath-chat-close {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+  }
+
+  .ath-chat-body {
+    padding: 14px;
+  }
+
+  .ath-chat-bubble {
+    max-width: 96%;
+    font-size: 0.86rem;
+  }
+
+  .ath-chat-quick {
+    padding: 10px 12px 0;
+    gap: 7px;
+  }
+
+  .ath-chat-chip {
+    padding: 8px 10px;
+    font-size: 0.74rem;
+  }
+
+  .ath-chat-input-area {
+    padding: 10px 12px 12px;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    gap: 8px;
+  }
+
+  .ath-chat-input {
+    min-height: 44px;
+    font-size: 0.84rem;
+  }
+
+  .ath-chat-send {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ath-chat-toggle {
+    right: 16px;
+    bottom: 16px;
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ath-chat-window {
+    right: 8px;
+    left: 8px;
+    bottom: 78px;
+    height: min(540px, calc(100dvh - 90px));
+  }
+
+  .ath-chat-header {
+    padding: 10px;
+  }
+
+  .ath-chat-brand-icon {
+    display: none;
+  }
+
+  .ath-chat-brand h3 {
+    font-size: 0.86rem;
+  }
+
+  .ath-chat-brand p {
+    font-size: 0.68rem;
+  }
+
+  .ath-lang-mini button {
+    padding: 5px 6px;
+    font-size: 0.65rem;
+  }
+
+  .ath-chat-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ath-language-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+}

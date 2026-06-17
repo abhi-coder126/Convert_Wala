@@ -1,0 +1,339 @@
+.ath-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 74px 6% 24px;
+  font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+}
+
+.ath-footer.light {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(37, 99, 235, 0.12), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(124, 58, 237, 0.1), transparent 34%),
+    linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  color: #0f172a;
+  border-top: 1px solid #e2e8f0;
+}
+
+.ath-footer.dark {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(37, 99, 235, 0.18), transparent 34%),
+    radial-gradient(circle at 90% 12%, rgba(124, 58, 237, 0.16), transparent 34%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: #f8fafc;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ath-footer-glow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -130px;
+  top: -150px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.18);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.ath-footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr 1.35fr 0.95fr 1.1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.ath-footer-brand,
+.ath-footer-col {
+  min-width: 0;
+}
+
+.ath-footer-brand {
+  padding: 26px;
+  border-radius: 30px;
+}
+
+.ath-footer.light .ath-footer-brand {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+}
+
+.ath-footer.dark .ath-footer-brand {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ath-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.72rem;
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.ath-footer-logo span {
+  color: #2563eb;
+}
+
+.ath-footer.dark .ath-footer-logo span {
+  color: #7dd3fc;
+}
+
+.ath-footer-brand p {
+  margin: 0;
+  max-width: 390px;
+  color: #64748b;
+  line-height: 1.75;
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.ath-footer.dark .ath-footer-brand p {
+  color: #cbd5e1;
+}
+
+.ath-footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.ath-footer-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.ath-footer.light .ath-footer-badges span {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.ath-footer.dark .ath-footer-badges span {
+  background: rgba(59, 130, 246, 0.14);
+  color: #93c5fd;
+}
+
+.ath-footer-col {
+  padding-top: 8px;
+}
+
+.ath-footer-col h3 {
+  margin: 0 0 18px;
+  color: inherit;
+  font-size: 0.86rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ath-footer-col a {
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 13px;
+  transition: 0.22s ease;
+}
+
+.ath-footer.dark .ath-footer-col a {
+  color: #cbd5e1;
+}
+
+.ath-footer-col a svg {
+  width: 15px;
+  min-width: 15px;
+}
+
+.ath-footer-col a:hover {
+  color: #2563eb;
+  transform: translateX(4px);
+}
+
+.ath-footer.dark .ath-footer-col a:hover {
+  color: #93c5fd;
+}
+
+.ath-footer-category-col {
+  min-width: 280px;
+}
+
+.ath-footer-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ath-footer-category-grid a {
+  width: 100%;
+  min-height: 42px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 15px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.ath-footer.light .ath-footer-category-grid a {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.ath-footer.dark .ath-footer-category-grid a {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #dbeafe;
+}
+
+.ath-footer-category-grid a:hover {
+  transform: translateY(-2px);
+  color: #2563eb;
+}
+
+.ath-footer.dark .ath-footer-category-grid a:hover {
+  color: #93c5fd;
+}
+
+.ath-footer-trust p {
+  margin: 0 0 13px;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.ath-footer.dark .ath-footer-trust p {
+  color: #cbd5e1;
+}
+
+.ath-footer-bottom {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 46px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.ath-footer.dark .ath-footer-bottom {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.ath-footer-bottom p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.ath-footer.dark .ath-footer-bottom p {
+  color: #94a3b8;
+}
+
+.ath-footer-bottom strong {
+  color: inherit;
+}
+
+.ath-footer-bottom div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ath-footer-bottom a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.ath-footer.dark .ath-footer-bottom a {
+  color: #94a3b8;
+}
+
+.ath-footer-bottom a:hover {
+  color: #2563eb;
+}
+
+.ath-footer.dark .ath-footer-bottom a:hover {
+  color: #93c5fd;
+}
+
+.ath-footer-bottom span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 1220px) {
+  .ath-footer-inner {
+    grid-template-columns: 1.3fr 0.8fr 1.4fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .ath-footer {
+    padding: 56px 5% 22px;
+  }
+
+  .ath-footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ath-footer-brand,
+  .ath-footer-category-col {
+    grid-column: 1 / -1;
+  }
+
+  .ath-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .ath-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .ath-footer-brand {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .ath-footer-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ath-footer-bottom div {
+    flex-wrap: wrap;
+  }
+}

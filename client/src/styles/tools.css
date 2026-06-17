@@ -1,0 +1,331 @@
+.tools-page {
+  min-height: 100vh;
+  padding: 0 0 70px;
+  transition: 0.3s ease;
+}
+
+.tools-page.light {
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,.15), transparent 30%),
+    radial-gradient(circle at top right, rgba(124,58,237,.12), transparent 30%),
+    #f8fafc;
+  color: #0f172a;
+}
+
+.tools-page.dark {
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(124,58,237,.15), transparent 30%),
+    #020617;
+  color: #f8fafc;
+}
+
+/* HERO */
+
+.tools-hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 64px 6% 58px;
+  overflow: visible;
+}
+
+.rb-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.tools-page.dark .rb-eyebrow {
+  color: #94a3b8;
+}
+
+.tools-hero h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.12;
+  margin-bottom: 18px;
+  font-weight: 900;
+  letter-spacing: -.06em;
+  overflow: visible;
+}
+
+.tools-page.light .tools-hero h1 {
+  background: linear-gradient(135deg,#0f172a,#2563eb,#7c3aed);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.tools-page.dark .tools-hero h1 {
+  background: linear-gradient(135deg,#ffffff,#60a5fa,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.tools-hero p {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.tools-page.dark .tools-hero p {
+  color: #94a3b8;
+}
+
+/* GRID WRAP */
+
+.tools-grid-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+.tool-group-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.tool-group-head h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.tool-count {
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.tools-page.light .tool-count {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.tools-page.dark .tool-count {
+  background: rgba(37,99,235,.18);
+  color: #93c5fd;
+}
+
+/* GRID */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+  gap: 24px;
+}
+
+/* CARD */
+
+.tool-card {
+  text-decoration: none;
+  border-radius: 28px;
+  padding: 24px;
+  transition: .25s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+.tools-page.light .tool-card {
+  background: rgba(255,255,255,.95);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 60px rgba(15,23,42,.08);
+}
+
+.tools-page.dark .tool-card {
+  background: rgba(15,23,42,.75);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.tool-card:hover {
+  transform: translateY(-6px);
+}
+
+.tools-page.light .tool-card:hover {
+  box-shadow: 0 30px 80px rgba(37,99,235,.15);
+}
+
+.tools-page.dark .tool-card:hover {
+  border-color: rgba(96,165,250,.3);
+}
+
+/* TOP */
+
+.tool-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tool-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.tools-page.light .tool-icon {
+  background: #eff6ff;
+}
+
+.tools-page.dark .tool-icon {
+  background: rgba(37,99,235,.15);
+}
+
+.tool-icon svg {
+  width: 30px;
+  height: 30px;
+  color: #2563eb;
+}
+
+.tool-status {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tools-page.light .tool-status {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tools-page.dark .tool-status {
+  background: rgba(22,163,74,.15);
+  color: #86efac;
+}
+
+/* CONTENT */
+
+.tool-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.tools-page.light .tool-card h3 {
+  color: #0f172a;
+}
+
+.tools-page.dark .tool-card h3 {
+  color: #f8fafc;
+}
+
+.tool-card p {
+  flex: 1;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.tools-page.light .tool-card p {
+  color: #64748b;
+}
+
+.tools-page.dark .tool-card p {
+  color: #94a3b8;
+}
+
+/* BOTTOM */
+
+.tool-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool-category {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tools-page.light .tool-category {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.tools-page.dark .tool-category {
+  background: rgba(37,99,235,.15);
+  color: #93c5fd;
+}
+
+.tool-open {
+  color: #2563eb;
+  font-weight: 900;
+}
+
+/* NO TOOLS */
+
+.no-tools {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.no-tools svg {
+  width: 60px;
+  height: 60px;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px) {
+  .tools-page {
+    padding-top: 0;
+  }
+
+  .tools-hero {
+    padding: 46px 20px 44px;
+  }
+
+  .tool-group-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}/* CATEGORY PAGE HERO DARK FIX */
+.tools-page.dark .tools-hero {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(37, 99, 235, 0.22), transparent 36%),
+    radial-gradient(circle at 90% 0%, rgba(124, 58, 237, 0.18), transparent 34%),
+    linear-gradient(135deg, #020617 0%, #0f172a 55%, #111827 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.tools-page.light .tools-hero {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(37, 99, 235, 0.14), transparent 36%),
+    radial-gradient(circle at 90% 0%, rgba(124, 58, 237, 0.12), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #eef5ff 100%) !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.tools-page.dark .tools-hero h1 {
+  background: linear-gradient(135deg, #ffffff, #93c5fd, #c4b5fd) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.tools-page.dark .tools-hero p {
+  color: #cbd5e1 !important;
+}
+
+.tools-page.dark .rb-eyebrow {
+  color: #93c5fd !important;
+}

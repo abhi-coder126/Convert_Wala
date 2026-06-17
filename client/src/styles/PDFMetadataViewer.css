@@ -1,0 +1,332 @@
+.pdf-meta-page {
+  min-height: 100vh;
+  padding: 110px 6% 60px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 34%),
+    #f6f9fe;
+  color: #111827;
+}
+
+.pdf-meta-page.dark {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 34%),
+    #070b14;
+  color: #f8fafc;
+}
+
+.pdf-meta-hero {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto 28px;
+}
+
+.pdf-meta-badge {
+  width: fit-content;
+  margin: 0 auto 16px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.pdf-meta-badge svg {
+  width: 18px;
+  height: 18px;
+}
+
+.pdf-meta-hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.8rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.05em;
+}
+
+.pdf-meta-hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.pdf-meta-page.dark .pdf-meta-hero p {
+  color: #94a3b8;
+}
+
+.pdf-meta-info {
+  max-width: 980px;
+  margin: 0 auto 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.pdf-meta-page.dark .pdf-meta-info {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.pdf-meta-info svg {
+  min-width: 38px;
+  color: #2563eb;
+}
+
+.pdf-meta-info h3 {
+  margin-bottom: 6px;
+}
+
+.pdf-meta-info p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.pdf-meta-page.dark .pdf-meta-info p {
+  color: #94a3b8;
+}
+
+.pdf-meta-shell {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 30px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 0.78fr 1.4fr;
+  gap: 24px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+}
+
+.pdf-meta-page.dark .pdf-meta-shell {
+  background: rgba(15, 23, 42, 0.78);
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+.pdf-meta-left {
+  display: grid;
+  gap: 18px;
+}
+
+.pdf-meta-upload {
+  border: 2px dashed rgba(37, 99, 235, 0.42);
+  border-radius: 24px;
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 24px;
+  background: linear-gradient(145deg, rgba(239, 246, 255, 0.95), rgba(245, 243, 255, 0.95));
+}
+
+.pdf-meta-page.dark .pdf-meta-upload {
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.pdf-meta-upload input {
+  display: none;
+}
+
+.pdf-meta-upload span {
+  width: 70px;
+  height: 70px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.pdf-meta-upload svg {
+  width: 34px;
+  height: 34px;
+}
+
+.pdf-meta-upload strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.pdf-meta-upload small {
+  color: #64748b;
+}
+
+.pdf-meta-actions,
+.pdf-meta-card {
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.pdf-meta-page.dark .pdf-meta-actions,
+.pdf-meta-page.dark .pdf-meta-card {
+  background: #020617;
+  border-color: #334155;
+}
+
+.pdf-meta-actions {
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.pdf-meta-actions button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.pdf-meta-actions button:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.pdf-meta-actions .danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.pdf-meta-card-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-meta-page.dark .pdf-meta-card-head {
+  border-color: #334155;
+}
+
+.pdf-meta-card-head h3 {
+  margin: 0;
+}
+
+.pdf-meta-card-head span {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 900;
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pdf-meta-table {
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.pdf-meta-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.pdf-meta-page.dark .pdf-meta-row {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.pdf-meta-row span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.pdf-meta-row strong {
+  color: inherit;
+  font-size: 14px;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+.pdf-meta-empty {
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #64748b;
+  padding: 24px;
+}
+
+.pdf-meta-empty svg {
+  width: 58px;
+  height: 58px;
+  color: #2563eb;
+  margin-bottom: 14px;
+}
+
+.pdf-meta-toast {
+  position: fixed;
+  top: 92px;
+  right: 22px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 16px;
+  padding: 13px 17px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  font-weight: 800;
+}
+
+.pdf-meta-toast.success {
+  color: #16a34a;
+}
+
+.pdf-meta-toast.error {
+  color: #dc2626;
+}
+
+@media (max-width: 992px) {
+  .pdf-meta-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-meta-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .pdf-meta-page {
+    padding: 92px 16px 42px;
+  }
+
+  .pdf-meta-info {
+    flex-direction: column;
+  }
+
+  .pdf-meta-card-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

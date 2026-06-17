@@ -1,0 +1,75 @@
+/* Image Converter Dark Theme */
+.img-converter-page.dark {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(37, 99, 235, 0.24), transparent 32%),
+    linear-gradient(180deg, #020617, #0f172a);
+  color: #f8fafc;
+}
+
+.img-converter-page.dark .img-converter-hero {
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 34%),
+    #020617;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.img-converter-page.dark .img-converter-hero h1,
+.img-converter-page.dark .img-upload-card strong,
+.img-converter-page.dark .img-info-card h3,
+.img-converter-page.dark .img-format-card h3,
+.img-converter-page.dark .img-preview-head h3,
+.img-converter-page.dark .img-info-grid strong,
+.img-converter-page.dark .img-result-details strong {
+  color: #f8fafc;
+}
+
+.img-converter-page.dark .img-converter-hero p,
+.img-converter-page.dark .img-upload-card p,
+.img-converter-page.dark .img-empty-preview,
+.img-converter-page.dark .img-info-grid span,
+.img-converter-page.dark .img-result-details span {
+  color: #cbd5e1;
+}
+
+.img-converter-page.dark .img-upload-card,
+.img-converter-page.dark .img-info-card,
+.img-converter-page.dark .img-format-card,
+.img-converter-page.dark .img-preview-card {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.img-converter-page.dark .img-info-grid div,
+.img-converter-page.dark .img-result-details div,
+.img-converter-page.dark .img-quality-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.img-converter-page.dark .img-upload-icon,
+.img-converter-page.dark .img-preview-head span {
+  background: rgba(56, 189, 248, 0.12);
+  color: #7dd3fc;
+}
+
+.img-converter-page.dark .img-format-grid button {
+  background: #020617;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+}
+
+.img-converter-page.dark .img-format-grid button:hover,
+.img-converter-page.dark .img-format-grid button.active {
+  background: #38bdf8;
+  color: #020617;
+  border-color: #38bdf8;
+}
+
+.img-converter-page.dark .img-quality-box div {
+  color: #e2e8f0;
+}
+
+.img-converter-page.dark .img-preview-box {
+  border-color: rgba(255, 255, 255, 0.12);
+}
