@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@imgly/background-removal": "^1.7.0",
+    "@skyra/gifenc": "^1.0.1",
     "axios": "^1.16.1",
     "emoji-picker-react": "^4.19.1",
     "html2canvas": "^1.4.1",
