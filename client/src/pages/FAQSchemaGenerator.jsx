@@ -13,7 +13,7 @@ import {
   Plus,
   Minus,
 } from "lucide-react";
-import "../styles/FaqSchemaGenerator.css";
+import "../styles/FAQSchemaGenerator.css";
 
 const STORAGE_LANGUAGE = "ath_language";
 const STORAGE_THEME = "ath_theme";

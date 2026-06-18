@@ -9,7 +9,7 @@ import {
   AlertCircle,
   X,
 } from "lucide-react";
-import "../styles/ImageConverter.css"
+import "../styles/imageConverter.css"
 const STORAGE_LANGUAGE = "ath_language";
 const STORAGE_THEME = "ath_theme";
 const SETTINGS_EVENT = "convertwala-settings-change";
