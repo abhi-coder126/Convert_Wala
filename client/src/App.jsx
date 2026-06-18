@@ -78,7 +78,7 @@ import SchemaGenerator from "./pages/SchemaGenerator";
 import SitemapChecker from "./pages/SitemapChecker";
 import RobotsTxtTester from "./pages/RobotsTxtTester";
 import OpenGraphGenerator from "./pages/OpenGraphGenerator";
-import FaqSchemaGenerator from "./pages/FaqSchemaGenerator";
+import FaqSchemaGenerator from "./pages/FAQSchemaGenerator";
 import YouTubeThumbnailDownloader from "./pages/YouTubeThumbnailDownloader";
 import EmojiPicker from "./pages/EmojiPicker";
 
